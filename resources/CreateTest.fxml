@@ -48,7 +48,6 @@
                   <TextField fx:id="tagFilter" prefHeight="25.0" prefWidth="136.0" />
                   <Label text="Test Name" />
                   <TextField fx:id="testName" />
-                  <RadioButton fx:id="isMarkedManually" mnemonicParsing="false" text="Manually Marked" />
                   <Button mnemonicParsing="false" onAction="#saveTest" text="Create Test" />
                </children>
             </HBox>
