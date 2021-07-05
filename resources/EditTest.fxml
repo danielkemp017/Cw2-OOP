@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditTestController">
+    <children>
+        <HBox prefHeight="300.0" prefWidth="700.0">
+            <children>
+                <TableView fx:id="QuestionTable" prefHeight="200.0" prefWidth="350.0">
+                    <columns>
+
+                    </columns>
+                </TableView>
+                <TableView fx:id="QuestionTestTable" prefHeight="200.0" prefWidth="350.0">
+                    <columns>
+
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+        <VBox layoutY="300.0" prefHeight="100.0" prefWidth="700.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="150.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#addQuestionTest" text="Add">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                  <Label fx:id="editedTestLbl" alignment="TOP_CENTER" text="Label" />
+                        <Button mnemonicParsing="false" onAction="#removeQuestionTest" text="Remove">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="700.0" spacing="15.0">
+                    <children>
+                        <Label text="Tag Filter" />
+                        <TextField fx:id="tagFilter" prefHeight="25.0" prefWidth="136.0" />
+                        <Label text="Test Name" />
+                        <TextField fx:id="testName" />
+                        <RadioButton fx:id="isMarkedManually" mnemonicParsing="false" text="Manually Marked" />
+                        <Button mnemonicParsing="false" onAction="#saveTest" text="Save Changes" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</Pane>

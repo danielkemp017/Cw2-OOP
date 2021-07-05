@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minWidth="0.0" prefHeight="450.0" prefWidth="750.0" spacing="5.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+   <children>
+      <Button fx:id="createUser" mnemonicParsing="false" onAction="#openCreateUser" text="Create User">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="createQuestion" mnemonicParsing="false" onAction="#openCreateQuestion" text="Create Question">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="testSelection" mnemonicParsing="false" onAction="#openTestSelection" text="Test Selection">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewResults" mnemonicParsing="false" onAction="#openViewResults" text="View Results">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

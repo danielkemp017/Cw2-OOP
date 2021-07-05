@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.2983490566037736" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CreateQuestionController">
+  <items>
+      <VBox alignment="CENTER_LEFT" minWidth="250.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+             <Label prefHeight="31.0" prefWidth="175.0" text="Question Description" />
+             <Label prefHeight="66.0" prefWidth="230.0" text="Example: When creating a multiple choice question please add the possible answers like this [possibleAns,possibleAns,possibleAns]" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+             <TextField fx:id="DescriptionText" prefWidth="230.0" />
+             <Label prefHeight="31.0" prefWidth="175.0" text="Question Type" />
+             <ComboBox fx:id="TypeText" prefWidth="150.0" />
+             <Label fx:id="AnswerLabel" prefHeight="31.0" prefWidth="175.0" text="Question Answer" />
+             <TextField fx:id="AnswerText" />
+             <Label prefHeight="31.0" prefWidth="175.0" text="Question Tags" />
+             <TextField fx:id="QuestionTagsText" editable="false" prefWidth="139.0" />
+            <HBox prefHeight="42.0" prefWidth="230.0" spacing="5.0">
+               <children>
+                  <Button fx:id="addTagBtn" mnemonicParsing="false" onAction="#addTagsPopup" text="Add Tags" />
+                  <Button fx:id="clearTagBtn" mnemonicParsing="false" onAction="#clearTags" text="Clear Tags" />
+               </children>
+            </HBox>
+             <Label prefHeight="31.0" prefWidth="175.0" text="Question Value" />
+             <TextField fx:id="QuestionValueText" prefHeight="25.0" prefWidth="102.0" />
+             <Button mnemonicParsing="false" onAction="#AddQuestion" text="Create Question" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+    <AnchorPane minHeight="0.0" minWidth="592.0" prefHeight="398.0" prefWidth="370.0">
+         <children>
+            <TableView fx:id="QuestionTable" layoutX="-2.0" layoutY="-2.0" minWidth="592.0" prefHeight="425.0" prefWidth="592.0">
+              <columns>
+
+              </columns>
+            </TableView>
+            <Button fx:id="cloneQuestionBtn" layoutX="247.0" layoutY="422.0" mnemonicParsing="false" onAction="#cloneQuestion" text="Clone Question" />
+             <RadioButton fx:id="MarkedManually" layoutX="6.0" layoutY="426.0" mnemonicParsing="false" text="Manually Marked" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

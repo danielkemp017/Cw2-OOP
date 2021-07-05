@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TakeTestController">
+   <children>
+      <TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" />
+      <Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" fx:id="submitResultBtn" onAction="#submitResult" text="End Test" />
+      <Button layoutX="10.0" layoutY="40.0" mnemonicParsing="false" fx:id="submitMarkBtn" onAction="#submitMarks" text="Submit Marks" />
+   </children>
+</Pane>
